@@ -93,11 +93,13 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\img\background.jpg" />
+    <Content Include="Content\img\descarga.jpg" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\person.png" />
     <Content Include="Content\img\product.png" />
     <Content Include="Content\main.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="CSS\estilos.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -109,6 +111,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="IMG\descarga.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -146,6 +149,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Registro.cshtml" />
     <Content Include="Views\Home\Exito.cshtml" />
+    <Content Include="Views\Home\ListarTodos.cshtml" />
+    <Content Include="Views\Home\Mensaje.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -155,7 +160,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\css\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

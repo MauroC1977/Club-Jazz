@@ -11,13 +11,13 @@ namespace jazzclub.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult Index()
+        /* public ActionResult Index()
         {
             return View();
             
         }
         [HttpPost]
-        public ActionResult Index(FormCollection collection)
+       public ActionResult Index(FormCollection collection)
         {
             mantenimientousuario ma = new mantenimientousuario();
             usuario usu = new usuario
@@ -35,7 +35,7 @@ namespace jazzclub.Controllers
             ma.Alta(usu);
             return RedirectToAction("Registro");
         }
-
+       */
         // GET: Home/Details/5
         public ActionResult Details(int id)
         {
@@ -45,14 +45,29 @@ namespace jazzclub.Controllers
         }
 
         // GET: Home/Create
-        public ActionResult Create()
+        public ActionResult Index()
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult Index(FormCollection collection)
+        {
+            mantenimientousuario ma = new mantenimientousuario();
+            usuario usu = new usuario
+            {
+                nombre = collection["nombre"],
+                celular = collection["celular"],
+                email = collection["email"],
+                ciudad = collection["ciudad"],
+                fecharegistro = collection["fecharegistro"]
+            };
+            ma.Alta(usu);
+            return RedirectToAction("Mensaje");
+        }
 
         // POST: Home/Create
-        
-       
+
+
 
         // GET: Home/Edit/5
         public ActionResult Edit(int id)
@@ -98,6 +113,15 @@ namespace jazzclub.Controllers
                 ma.Borrar(id);
                 return RedirectToAction("Index");
             }
+        }
+        public ActionResult ListarTodos()
+        {
+            mantenimientousuario ma = new mantenimientousuario();
+            return View(ma.RecuperarTodos());
+        }
+        public ActionResult Mensaje()
+        {
+            return View();
         }
     }
 }
